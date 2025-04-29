@@ -1,4 +1,4 @@
-# x-client-transaction-pear-dict
+# x-client-transaction-pair-dict
 
 ```js
 import { generateTransactionId } from "x-client-transaction-id-generater";
