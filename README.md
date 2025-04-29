@@ -1,8 +1,8 @@
-# x-client-transaction-pair-dict
+# x-client-transaction-id-pair-dict
 
 ```js
 import { generateTransactionId } from "x-client-transaction-id-generater";
-const url = "https://raw.githubusercontent.com/fa0311/x-client-transaction-pair-dict/refs/heads/main/pair.json";
+const url = "https://raw.githubusercontent.com/fa0311/x-client-transaction-id-pair-dict/refs/heads/main/pair.json";
 const res = await fetch(url);
 const json = await res.json();
 const randomPair = json[Math.floor(Math.random() * json.length)];
