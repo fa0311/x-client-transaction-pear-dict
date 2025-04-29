@@ -1,9 +1,9 @@
 {
-  "name": "x-client-transaction-pear-dict",
+  "name": "x-client-transaction-pair-dict",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "start": "ts-node main.ts"
+    "start": "node --loader ts-node/esm main.ts"
   },
   "license": "MIT",
   "dependencies": {

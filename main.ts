@@ -8,24 +8,25 @@ interface Dict {
 }
 
 const dict: Dict[] = [];
-const max = 100;
+const max = 30;
+const browser = await puppeteer.launch({
+  headless: true,
+  args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--disable-accelerated-2d-canvas", "--disable-gpu"],
+});
+
 for (let i = 0; i < max; i++) {
   console.log(`${i} / ${max}`);
   try {
-    const browser = await puppeteer.launch({ headless: true });
     const session = await createSession(browser, undefined);
-    try {
-      const animationKey = await session.key("GET", "/i/api/114514/elonmusk");
-      dict.push({
-        animationKey: animationKey,
-        verification: session.verification,
-      });
-    } finally {
-      await session.close();
-    }
+    const animationKey = await session.key("GET", "/i/api/114514/elonmusk");
+    dict.push({
+      animationKey: animationKey.split("obfiowerehiring")[1],
+      verification: session.verification,
+    });
   } catch (e) {
     console.error(e);
   }
 }
 
-await fs.writeFile("pear.json", JSON.stringify(dict, null, 2));
+await fs.writeFile("pair.json", JSON.stringify(dict, null, 2));
+await browser.close();
