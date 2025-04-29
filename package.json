@@ -1,0 +1,17 @@
+{
+  "name": "x-client-transaction-pear-dict",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node main.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.7.2",
+    "x-client-transaction-id-extract-browser": "^0.0.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
